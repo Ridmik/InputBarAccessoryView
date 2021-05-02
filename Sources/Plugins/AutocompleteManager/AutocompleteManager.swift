@@ -349,7 +349,11 @@ open class AutocompleteManager: NSObject, InputPlugin, UITextViewDelegate, UITab
         
         // Set to a blank attributed string to prevent keyboard autocorrect from cloberring the insert
         textView.attributedText = NSAttributedString()
-
+        
+        newAttributedText.addAttribute(NSAttributedString.Key.backgroundColor,
+                                       value: UIColor.clear,
+                                       range: NSMakeRange(0, newAttributedText.length))
+        
         textView.attributedText = newAttributedText
     }
     
