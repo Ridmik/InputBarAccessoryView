@@ -5,6 +5,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
+      location = "group:CHANGELOG.md">
+   </FileRef>
+   <FileRef
       location = "group:LICENSE">
    </FileRef>
    <FileRef
@@ -12,8 +15,5 @@
    </FileRef>
    <FileRef
       location = "group:InputBarAccessoryView.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Example/Example.xcodeproj">
    </FileRef>
 </Workspace>
