@@ -353,6 +353,11 @@ open class AutocompleteManager: NSObject, InputPlugin, UITextViewDelegate, UITab
         newAttributedText.addAttribute(NSAttributedString.Key.backgroundColor,
                                        value: UIColor.clear,
                                        range: NSMakeRange(0, newAttributedText.length))
+            
+    
+        newAttributedText.addAttribute(NSAttributedString.Key.foregroundColor,
+                                       value: UIColor(red: 9/256, green: 110/256, blue: 164/256, alpha: 1),
+                                       range: NSMakeRange(0, newAttributedText.length))
         
         textView.attributedText = newAttributedText
     }
