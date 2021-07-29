@@ -41,6 +41,8 @@ open class InputTextView: UITextView {
     
     // MARK: - Properties
     
+    weak var touchableDelegate : TouchableTextViewDelegate?
+    
     open override var text: String! {
         didSet {
             postTextViewDidChangeNotification()
@@ -242,7 +244,7 @@ open class InputTextView: UITextView {
     }
     
     open override func paste(_ sender: Any?) {
-        
+        touchableDelegate?.pasting()
         guard isImagePasteEnabled, let image = UIPasteboard.general.image else {
             return super.paste(sender)
         }
@@ -404,5 +406,9 @@ open class InputTextView: UITextView {
         layoutManager.invalidateLayout(forCharacterRange: range, actualCharacterRange: nil)
     }
     
+}
+
+public protocol TouchableTextViewDelegate : AnyObject {
+    func pasting()
 }
 
