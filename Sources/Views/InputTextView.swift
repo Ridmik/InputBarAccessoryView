@@ -41,7 +41,7 @@ open class InputTextView: UITextView {
     
     // MARK: - Properties
     
-    weak var touchableDelegate : TouchableTextViewDelegate?
+    open weak var touchableDelegate : TouchableTextViewDelegate?
     
     open override var text: String! {
         didSet {
